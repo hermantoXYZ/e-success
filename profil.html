@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | E-Success FEB-UNM</title>
+    <title>Profil | E-Success FEB-UNM</title>
     <link rel="stylesheet" href="/style.css"> 
     <!-- <link rel="stylesheet" href="/Users/andihermanto/Documents/WebApp/DJANGO/E-SUCCESS/E-SUCCESS/style.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -125,118 +125,88 @@
 
             <!-- Dashboard Content -->
             <div class="dashboard-content">
-                <!-- Stats Cards -->
-                <div class="stats-cards">
-                    <div class="stat-card">
-                        <i class="ri-book-open-line"></i>
-                        <div class="stat-info">
-                            <h3>Active Courses</h3>
-                            <p>8</p>
+                <!-- OPENING ELEMENT PROFILE SECTION -->
+                <div class="profile-container">
+                    <!-- Profile Picture Section -->
+                    <div class="profile-section">
+                        <h2>Profile picture</h2>
+                        <div class="profile-picture">
+                            <img src="https://padinusantara.co.id/media/team/andi.jpg" alt="Profile Picture" id="preview-image">
+                            <p class="file-info">JPG, GIF or PNG. Max size of 800K</p>
+                            <div class="profile-actions">
+                                <button class="upload-btn"><i class="ri-upload-2-line"></i> Upload picture</button>
+                                <button class="delete-btn">Delete</button>
+                            </div>
+                            <input type="file" id="profile-upload" hidden accept="image/*">
                         </div>
                     </div>
-                    <div class="stat-card">
-                        <i class="ri-task-line"></i>
-                        <div class="stat-info">
-                            <h3>Assignments</h3>
-                            <p>12</p>
+
+                    <!-- General Information Section -->
+                    <div class="settings-section">
+                        <h2>General information</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" class="form-control" placeholder="First name">
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" class="form-control" placeholder="Last name">
+                            </div>
                         </div>
-                    </div>
-                    <div class="stat-card">
-                        <i class="ri-timer-line"></i>
-                        <div class="stat-info">
-                            <h3>Hours Spent</h3>
-                            <p>45h</p>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Base</label>
+                                <input type="text" class="form-control" placeholder="e.g. Pendidikan Ekonomi">
+                            </div>
+                            <div class="form-group">
+                                <label>Tanggal Masuk</label>
+                                <input type="text" class="form-control" placeholder="e.g. Makassar">
+                            </div>
                         </div>
-                    </div>
-                    <div class="stat-card">
-                        <i class="ri-medal-line"></i>
-                        <div class="stat-info">
-                            <h3>Achievements</h3>
-                            <p>15</p>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="text" class="form-control" placeholder="Your address">
+                            </div>
+                            <div class="form-group">
+                                <label>No HP</label>
+                                <input type="email" class="form-control" placeholder="example@company.com">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>No Hp Orang Tua</label>
+                                <input type="tel" class="form-control" placeholder="e.g. +(62)8123 456 789">
+                            </div>
+                            <div class="form-group">
+                                <label>Tanggal Lahir</label>
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Tempat Lahir</label>
+                                <input type="text" class="form-control" placeholder="Company Name">
+                            </div>
+                            <div class="form-group">
+                                <label>Jenis Kelamin</label>
+                                <input type="option" class="form-control" placeholder="Laki-laki">
+                            </div>
+                            <div class="form-group">
+                                <label>Alamat Saat ini</label>
+                                <input type="text" class="form-control" placeholder="Alamat saat ini">
+                            </div>
+                            <div class="form-group">
+                                <label>Social Media</label>
+                                <input type="text" class="form-control" placeholder="Username: @baco">
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Recent Activities -->
-                <div class="recent-activities">
-                    <h2>Recent Activities</h2>
-                    <div class="activity-list">
-                        <div class="activity-item">
-                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
-                            <div class="activity-details">
-                                <h4>Assignment Submitted</h4>
-                                <p>You submitted Marketing Strategy assignment</p>
-                                <span class="time">2 hours ago</span>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-icon"><i class="ri-video-line"></i></div>
-                            <div class="activity-details">
-                                <h4>Course Progress</h4>
-                                <p>Completed Module 3 of Business Ethics</p>
-                                <span class="time">Yesterday</span>
-                            </div>
-                        </div>
+                <!-- PROFILE -->
 
-                        <div class="activity-item">
-                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
-                            <div class="activity-details">
-                                <h4>Assignment Submitted</h4>
-                                <p>You submitted Marketing Strategy assignment</p>
-                                <span class="time">2 hours ago</span>
-                            </div>
-                        </div>
-
-                        <div class="activity-item">
-                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
-                            <div class="activity-details">
-                                <h4>Assignment Submitted</h4>
-                                <p>You submitted Marketing Strategy assignment</p>
-                                <span class="time">2 hours ago</span>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
-                            <div class="activity-details">
-                                <h4>Assignment Submitted</h4>
-                                <p>You submitted Marketing Strategy assignment</p>
-                                <span class="time">2 hours ago</span>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
-                            <div class="activity-details">
-                                <h4>Assignment Submitted</h4>
-                                <p>You submitted Marketing Strategy assignment</p>
-                                <span class="time">2 hours ago</span>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
-                            <div class="activity-details">
-                                <h4>Assignment Submitted</h4>
-                                <p>You submitted Marketing Strategy assignment</p>
-                                <span class="time">2 hours ago</span>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
-                            <div class="activity-details">
-                                <h4>Assignment Submitted</h4>
-                                <p>You submitted Marketing Strategy assignment</p>
-                                <span class="time">2 hours ago</span>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
-                            <div class="activity-details">
-                                <h4>Assignment Submitted</h4>
-                                <p>You submitted Marketing Strategy assignment</p>
-                                <span class="time">2 hours ago</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -319,7 +289,7 @@
     </script>
 
 
-<!-- Add this before closing body tag -->
+<!-- JS FOR NOTIFIKASI -->
 <script>
     const notificationButton = document.querySelector('.ri-notification-3-line');
     const notificationModal = document.getElementById('notificationModal');
@@ -336,5 +306,8 @@
         }
     });
 </script>
+<!-- JS FOR NOTIFIKASI -->
+
+
 </body>
 </html>
