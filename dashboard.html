@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | E-Success FEB-UNM</title>
+    <link rel="stylesheet" href="/Users/andihermanto/Documents/WebApp/DJANGO/E-SUCCESS/E-SUCCESS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+               <i class="ri-file-damage-fill"></i>
+                <div class="logo-text">
+                    <h2>E-Success</h2>
+                    <span>FEB-UNM</span>
+                </div>
+            </div>
+          
+            
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="active">
+                        <a href="#"><i class="ri-dashboard-line"></i> Dashboard</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#"><i class="ri-user-line"></i>Layanan Akademik<i class="ri-arrow-down-s-line dropdown-icon"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#"><i class="ri-file-list-line"></i>KRS Online</a></li>
+                            <li><a href="#"><i class="ri-calendar-line"></i>Jadwal Kuliah</a></li>
+                            <li><a href="#"><i class="ri-book-line"></i>Transkrip Nilai</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ri-book-line"></i>Nilai Seminar/Ujian</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ri-calendar-line"></i> Tracer Studi</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#"><i class="ri-calendar-event-line"></i>Pengajaran<i class="ri-arrow-down-s-line dropdown-icon"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#"><i class="ri-time-line"></i>Jadwal Mengajar</a></li>
+                            <li><a href="#"><i class="ri-group-line"></i>Daftar Mahasiswa</a></li>
+                            <li><a href="#"><i class="ri-edit-line"></i>Input Nilai</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ri-file-list-line"></i> Assignments</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ri-message-2-line"></i> Messages</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ri-settings-line"></i> Panduan</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="#" class="logout"><i class="ri-logout-box-line"></i> Logout</a>
+                <div class="sidebar-footer-p">
+                    <p>© 2024 Praksis Digital Nusantara.</p>
+                    <p>Version: 1.0.0-alpha.1</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <button id="toggle-sidebar"><i class="ri-menu-line"></i></button>
+                    <h1>Dashboard</h1>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="ri-search-line"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <div class="user-menu">
+                        <i class="ri-contrast-2-fill"></i>
+                        <i class="ri-notification-3-line"></i>
+                        <img src="https://cdn.britannica.com/99/236599-050-1199AD2C/Mark-Zuckerberg-2019.jpg?w=385" alt="User Avatar" class="avatar">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Stats Cards -->
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <i class="ri-book-open-line"></i>
+                        <div class="stat-info">
+                            <h3>Active Courses</h3>
+                            <p>8</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="ri-task-line"></i>
+                        <div class="stat-info">
+                            <h3>Assignments</h3>
+                            <p>12</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="ri-timer-line"></i>
+                        <div class="stat-info">
+                            <h3>Hours Spent</h3>
+                            <p>45h</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="ri-medal-line"></i>
+                        <div class="stat-info">
+                            <h3>Achievements</h3>
+                            <p>15</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activities -->
+                <div class="recent-activities">
+                    <h2>Recent Activities</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
+                            <div class="activity-details">
+                                <h4>Assignment Submitted</h4>
+                                <p>You submitted Marketing Strategy assignment</p>
+                                <span class="time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="ri-video-line"></i></div>
+                            <div class="activity-details">
+                                <h4>Course Progress</h4>
+                                <p>Completed Module 3 of Business Ethics</p>
+                                <span class="time">Yesterday</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
+                            <div class="activity-details">
+                                <h4>Assignment Submitted</h4>
+                                <p>You submitted Marketing Strategy assignment</p>
+                                <span class="time">2 hours ago</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
+                            <div class="activity-details">
+                                <h4>Assignment Submitted</h4>
+                                <p>You submitted Marketing Strategy assignment</p>
+                                <span class="time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
+                            <div class="activity-details">
+                                <h4>Assignment Submitted</h4>
+                                <p>You submitted Marketing Strategy assignment</p>
+                                <span class="time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
+                            <div class="activity-details">
+                                <h4>Assignment Submitted</h4>
+                                <p>You submitted Marketing Strategy assignment</p>
+                                <span class="time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
+                            <div class="activity-details">
+                                <h4>Assignment Submitted</h4>
+                                <p>You submitted Marketing Strategy assignment</p>
+                                <span class="time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
+                            <div class="activity-details">
+                                <h4>Assignment Submitted</h4>
+                                <p>You submitted Marketing Strategy assignment</p>
+                                <span class="time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
+                            <div class="activity-details">
+                                <h4>Assignment Submitted</h4>
+                                <p>You submitted Marketing Strategy assignment</p>
+                                <span class="time">2 hours ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS FOR SIDEBAR/OPENG/CLOSE -->
+   <script>
+        const toggleButton = document.getElementById('toggle-sidebar');
+        const dashboardContainer = document.querySelector('.dashboard-container');
+        const mainContent = document.querySelector('.main-content');
+        const sidebar = document.querySelector('.sidebar');
+        
+        // Toggle sidebar with button
+        toggleButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dashboardContainer.classList.toggle('sidebar-collapsed');
+        });
+
+        // Close sidebar when clicking main content
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !toggleButton.contains(e.target)) {
+                dashboardContainer.classList.add('sidebar-collapsed');
+            }
+        });
+
+        // Active Menu Item
+        const menuItems = document.querySelectorAll('.sidebar-menu li');
+        menuItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                menuItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+    </script>
+
+    <!-- JS FOR DROPDOWN -->
+    <script>
+      // Dropdown functionality
+      const dropdownItems = document.querySelectorAll('.has-dropdown > a');
+        
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const parent = item.parentElement;
+                
+                // Toggle current dropdown
+                if (parent.classList.contains('active')) {
+                    parent.classList.remove('active');
+                } else {
+                    // Close other dropdowns
+                    dropdownItems.forEach(other => {
+                        other.parentElement.classList.remove('active');
+                    });
+                    parent.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+    <!-- JS FOR DARK DASHBOARD -->
+    <script>
+        // Dark mode toggle
+        const darkModeToggle = document.querySelector('.ri-contrast-2-fill');
+        
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+        }
+        
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            // Save preference
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                localStorage.setItem('darkMode', null);
+            }
+        });
+    </script>
+</body>
+</html>
