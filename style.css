@@ -278,7 +278,7 @@ button:hover{
 .sidebar {
     width: 260px;
     background: #fff;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
     transition: all 0.3s ease;
@@ -362,10 +362,8 @@ body.dark-mode .logo-text span {
 }
 
 .sidebar-menu li {
-    padding: 12px 24px;
+    padding: 18px 24px;
     margin: 4px 0;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -1227,6 +1225,7 @@ td {
 .status-badge.progress {
     background: #e8eaf6;
     color: #3f51b5;
+    white-space: nowrap;
 }
 
 .action-btn {
