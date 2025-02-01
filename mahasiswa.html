@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | E-Success FEB-UNM</title>
+    <title>Profil | E-Success FEB-UNM</title>
     <link rel="stylesheet" href="/style.css"> 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
@@ -122,121 +122,201 @@
     </div>
 </div>
 
-            <!-- Dashboard Content -->
-            <div class="dashboard-content">
-                <!-- Stats Cards -->
-                <div class="stats-cards">
-                    <div class="stat-card">
-                        <i class="ri-book-open-line"></i>
-                        <div class="stat-info">
-                            <h3>Active Courses</h3>
-                            <p>8</p>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <i class="ri-task-line"></i>
-                        <div class="stat-info">
-                            <h3>Assignments</h3>
-                            <p>12</p>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <i class="ri-timer-line"></i>
-                        <div class="stat-info">
-                            <h3>Hours Spent</h3>
-                            <p>45h</p>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <i class="ri-medal-line"></i>
-                        <div class="stat-info">
-                            <h3>Achievements</h3>
-                            <p>15</p>
-                        </div>
-                    </div>
+
+<div class="dashboard-content">
+    <div class="student-list-container">
+        <div class="list-header">
+            <div class="list-title">
+                <h2>Daftar Mahasiswa</h2>
+                <p>Daftar mahasiswa aktif Fakultas Ekonomi dan Bisnis</p>
+            </div>
+            <div class="list-filters">
+                <div class="filter-dropdown">
+                    <button class="filter-btn">
+                        Filter by status <i class="ri-arrow-down-s-line"></i>
+                    </button>
                 </div>
-
-                <!-- Recent Activities -->
-                <div class="recent-activities">
-                    <h2>Recent Activities</h2>
-                    <div class="activity-list">
-                        <div class="activity-item">
-                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
-                            <div class="activity-details">
-                                <h4>Assignment Submitted</h4>
-                                <p>You submitted Marketing Strategy assignment</p>
-                                <span class="time">2 hours ago</span>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-icon"><i class="ri-video-line"></i></div>
-                            <div class="activity-details">
-                                <h4>Course Progress</h4>
-                                <p>Completed Module 3 of Business Ethics</p>
-                                <span class="time">Yesterday</span>
-                            </div>
-                        </div>
-
-                        <div class="activity-item">
-                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
-                            <div class="activity-details">
-                                <h4>Assignment Submitted</h4>
-                                <p>You submitted Marketing Strategy assignment</p>
-                                <span class="time">2 hours ago</span>
-                            </div>
-                        </div>
-
-                        <div class="activity-item">
-                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
-                            <div class="activity-details">
-                                <h4>Assignment Submitted</h4>
-                                <p>You submitted Marketing Strategy assignment</p>
-                                <span class="time">2 hours ago</span>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
-                            <div class="activity-details">
-                                <h4>Assignment Submitted</h4>
-                                <p>You submitted Marketing Strategy assignment</p>
-                                <span class="time">2 hours ago</span>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
-                            <div class="activity-details">
-                                <h4>Assignment Submitted</h4>
-                                <p>You submitted Marketing Strategy assignment</p>
-                                <span class="time">2 hours ago</span>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
-                            <div class="activity-details">
-                                <h4>Assignment Submitted</h4>
-                                <p>You submitted Marketing Strategy assignment</p>
-                                <span class="time">2 hours ago</span>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
-                            <div class="activity-details">
-                                <h4>Assignment Submitted</h4>
-                                <p>You submitted Marketing Strategy assignment</p>
-                                <span class="time">2 hours ago</span>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-icon"><i class="ri-file-text-line"></i></div>
-                            <div class="activity-details">
-                                <h4>Assignment Submitted</h4>
-                                <p>You submitted Marketing Strategy assignment</p>
-                                <span class="time">2 hours ago</span>
-                            </div>
-                        </div>
+                <div class="date-filter">
+                    <div class="date-input">
+                        <i class="ri-calendar-line"></i>
+                        <input type="date" placeholder="From">
+                    </div>
+                    <div class="date-input">
+                        <i class="ri-calendar-line"></i>
+                        <input type="date" placeholder="To">
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="student-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>NAMA MAHASISWA</th>
+                        <th>TANGGAL MASUK</th>
+                        <th>NIM</th>
+                        <th>PROGRAM STUDI</th>
+                        <th>STATUS</th>
+                        <th>AKSI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="student-info">
+                                <img src="/admin.jpg" alt="Student">
+                                <span>hermantoXYZ</span>
+                            </div>
+                        </td>
+                        <td>Apr 23, 2023</td>
+                        <td>2023001234</td>
+                        <td>Pendidikan Ekonomi</td>
+                        <td><span class="status-badge completed">Aktif</span></td>
+                        <td>
+                            <button class="action-btn"><i class="ri-more-2-fill"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="student-info">
+                                <img src="/admin.jpg" alt="Student">
+                                <span>hermantoXYZ</span>
+                            </div>
+                        </td>
+                        <td>Apr 23, 2023</td>
+                        <td>2023001234</td>
+                        <td>Pendidikan Ekonomi</td>
+                        <td><span class="status-badge cancelled">Cancelled</span></td>
+                        <td>
+                            <button class="action-btn"><i class="ri-more-2-fill"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="student-info">
+                                <img src="/admin.jpg" alt="Student">
+                                <span>hermantoXYZ</span>
+                            </div>
+                        </td>
+                        <td>Apr 23, 2023</td>
+                        <td>2023001234</td>
+                        <td>Pendidikan Ekonomi</td>
+                        <td><span class="status-badge progress">On Progress</span></td>
+                        <td>
+                            <button class="action-btn"><i class="ri-more-2-fill"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="student-info">
+                                <img src="/admin.jpg" alt="Student">
+                                <span>hermantoXYZ</span>
+                            </div>
+                        </td>
+                        <td>Apr 23, 2023</td>
+                        <td>2023001234</td>
+                        <td>Pendidikan Ekonomi</td>
+                        <td><span class="status-badge progress">On Progress</span></td>
+                        <td>
+                            <button class="action-btn"><i class="ri-more-2-fill"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="student-info">
+                                <img src="/admin.jpg" alt="Student">
+                                <span>hermantoXYZ</span>
+                            </div>
+                        </td>
+                        <td>Apr 23, 2023</td>
+                        <td>2023001234</td>
+                        <td>Pendidikan Ekonomi</td>
+                        <td><span class="status-badge progress">On Progress</span></td>
+                        <td>
+                            <button class="action-btn"><i class="ri-more-2-fill"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="student-info">
+                                <img src="/admin.jpg" alt="Student">
+                                <span>hermantoXYZ</span>
+                            </div>
+                        </td>
+                        <td>Apr 23, 2023</td>
+                        <td>2023001234</td>
+                        <td>Pendidikan Ekonomi</td>
+                        <td><span class="status-badge progress">On Progress</span></td>
+                        <td>
+                            <button class="action-btn"><i class="ri-more-2-fill"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="student-info">
+                                <img src="/admin.jpg" alt="Student">
+                                <span>hermantoXYZ</span>
+                            </div>
+                        </td>
+                        <td>Apr 23, 2023</td>
+                        <td>2023001234</td>
+                        <td>Pendidikan Ekonomi</td>
+                        <td><span class="status-badge progress">On Progress</span></td>
+                        <td>
+                            <button class="action-btn"><i class="ri-more-2-fill"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="student-info">
+                                <img src="/admin.jpg" alt="Student">
+                                <span>hermantoXYZ</span>
+                            </div>
+                        </td>
+                        <td>Apr 23, 2023</td>
+                        <td>2023001234</td>
+                        <td>Pendidikan Ekonomi</td>
+                        <td><span class="status-badge progress">On Progress</span></td>
+                        <td>
+                            <button class="action-btn"><i class="ri-more-2-fill"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="student-info">
+                                <img src="/admin.jpg" alt="Student">
+                                <span>hermantoXYZ</span>
+                            </div>
+                        </td>
+                        <td>Apr 23, 2023</td>
+                        <td>2023001234</td>
+                        <td>Pendidikan Ekonomi</td>
+                        <td><span class="status-badge progress">On Progress</span></td>
+                        <td>
+                            <button class="action-btn"><i class="ri-more-2-fill"></i></button>
+                        </td>
+                    </tr>
+
+                
+                    <!-- Add more student rows here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
         </div>
     </div>
 
@@ -318,7 +398,7 @@
     </script>
 
 
-<!-- Add this before closing body tag -->
+<!-- JS FOR NOTIFIKASI -->
 <script>
     const notificationButton = document.querySelector('.ri-notification-3-line');
     const notificationModal = document.getElementById('notificationModal');
@@ -335,5 +415,8 @@
         }
     });
 </script>
+<!-- JS FOR NOTIFIKASI -->
+
+
 </body>
 </html>

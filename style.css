@@ -474,7 +474,7 @@ body.dark-mode .logo-text span {
 
 .sidebar-footer-p {
     margin-top: 15px;
-    text-align: center;
+    text-align: left;
 }
 
 .sidebar-footer-p p {
@@ -770,7 +770,7 @@ body.dark-mode .logo-text span {
     position: fixed;
     top: 90px;
     right: 20px;
-    width: 380px;
+    width: 310px;
     background: white;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -999,5 +999,283 @@ body.dark-mode .delete-btn {
 @media (max-width: 768px) {
     .form-row {
         grid-template-columns: 1fr;
+    }
+}
+
+
+/* Services Styles */
+.services-container {
+    padding: 20px;
+}
+
+.service-category {
+    margin-bottom: 40px;
+}
+
+.service-category h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.service-category h2 i {
+    color: #4a90e2;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: #4a90e2;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.service-card p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.service-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #4a90e2;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.service-btn:hover {
+    background: #357abd;
+}
+
+/* Dark mode support */
+body.dark-mode .service-category h2 {
+    color: #fff;
+}
+
+body.dark-mode .service-card {
+    background: #1f2937;
+}
+
+body.dark-mode .service-card h3 {
+    color: #fff;
+}
+
+body.dark-mode .service-card p {
+    color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-card {
+        padding: 20px;
+    }
+}
+
+/* LIST USER/MAHASISWA */
+.student-list-container {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.list-title h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.list-title p {
+    color: #666;
+    font-size: 14px;
+}
+
+.list-filters {
+    display: flex;
+    gap: 16px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #000;
+    cursor: pointer;
+}
+
+.date-filter {
+    display: flex;
+    gap: 12px;
+}
+
+.date-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.date-input i {
+    position: absolute;
+    left: 12px;
+    color: #666;
+}
+
+.date-input input {
+    padding: 8px 12px 8px 36px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.student-table {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 12px 16px;
+    background: #f8f9fa;
+    color: #666;
+    font-weight: 500;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+td {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.student-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.student-info img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-badge.completed {
+    background: #e6f4ea;
+    color: #1e7e34;
+}
+
+.status-badge.cancelled {
+    background: #fde7e9;
+    color: #dc3545;
+}
+
+.status-badge.progress {
+    background: #e8eaf6;
+    color: #3f51b5;
+}
+
+.action-btn {
+    padding: 6px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #666;
+}
+
+/* Dark mode support */
+body.dark-mode .student-list-container {
+    background: #1f2937;
+}
+
+body.dark-mode .list-title p {
+    color: #9ca3af;
+}
+
+body.dark-mode th {
+    background: #374151;
+    color: #e5e7eb;
+}
+
+body.dark-mode td {
+    border-color: #374151;
+    color: #e5e7eb;
+}
+
+body.dark-mode .filter-btn,
+body.dark-mode .date-input input {
+    background: #374151;
+    border-color: #4b5563;
+    color: #e5e7eb;
+}
+
+
+@media (max-width: 768px) {
+    .list-header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .list-filters {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .date-filter {
+        flex-direction: column;
     }
 }
