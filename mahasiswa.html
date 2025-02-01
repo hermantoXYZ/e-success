@@ -326,6 +326,21 @@
         const dashboardContainer = document.querySelector('.dashboard-container');
         const mainContent = document.querySelector('.main-content');
         const sidebar = document.querySelector('.sidebar');
+
+          // Function to check screen width and collapse sidebar
+        const checkScreenWidth = () => {
+            if (window.innerWidth <= 768) {
+                dashboardContainer.classList.add('sidebar-collapsed');
+            } else {
+                dashboardContainer.classList.remove('sidebar-collapsed');
+            }
+        };
+
+        // Check on page load
+        checkScreenWidth();
+
+        // Check on window resize
+        window.addEventListener('resize', checkScreenWidth);
         
         // Toggle sidebar with button
         toggleButton.addEventListener('click', (e) => {
