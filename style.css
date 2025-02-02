@@ -292,6 +292,7 @@ button:hover{
 .logo {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 20px;
     gap: 12px;
 }
@@ -570,6 +571,11 @@ body.dark-mode .logo-text span {
     align-items: center;
     gap: 20px;
 }
+
+.header-left h1 {
+    margin-bottom: -9px;
+}
+
 
 .header-right {
     display: flex;
