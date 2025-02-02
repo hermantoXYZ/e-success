@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Nilai Mahasiswa | E-Success FEB-UNM</title>
+    <link rel="stylesheet" href="/style.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+               <i class="ri-file-damage-fill"></i>
+                <div class="logo-text">
+                    <h2>E-Success</h2>
+                    <span>FEB-UNM</span>
+                </div>
+            </div>
+          
+            
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="active">
+                        <a href="#"><i class="ri-dashboard-line"></i> Dashboard</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#"><i class="ri-user-line"></i>Layanan Akademik<i class="ri-arrow-down-s-line dropdown-icon"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#"><i class="ri-file-list-line"></i>KRS Online</a></li>
+                            <li><a href="#"><i class="ri-calendar-line"></i>Jadwal Kuliah</a></li>
+                            <li><a href="#"><i class="ri-book-line"></i>Transkrip Nilai</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ri-book-line"></i>Nilai Seminar/Ujian</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ri-calendar-line"></i> Tracer Studi</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#"><i class="ri-calendar-event-line"></i>Pengajaran<i class="ri-arrow-down-s-line dropdown-icon"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#"><i class="ri-time-line"></i>Jadwal Mengajar</a></li>
+                            <li><a href="#"><i class="ri-group-line"></i>Daftar Mahasiswa</a></li>
+                            <li><a href="#"><i class="ri-edit-line"></i>Input Nilai</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ri-file-list-line"></i> Assignments</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ri-message-2-line"></i> Messages</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ri-settings-line"></i> Panduan</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="#" class="logout"><i class="ri-logout-box-line"></i> Logout</a>
+                <div class="sidebar-footer-p">
+                    <p>© 2024 Praksis Digital Nusantara.</p>
+                    <p>Version: 1.0.0-alpha.1</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <button id="toggle-sidebar"><i class="ri-menu-line"></i></button>
+                    <h1>Dashboard</h1>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="ri-search-line"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <div class="user-menu">
+                        <i class="ri-contrast-2-fill"></i>
+                        <i class="ri-notification-3-line"></i>
+                        <img src="https://cdn.britannica.com/99/236599-050-1199AD2C/Mark-Zuckerberg-2019.jpg?w=385" alt="User Avatar" class="avatar">
+                    </div>
+                </div>
+            </header>
+
+            <!-- MODAL NOTIFIKASI -->
+<div class="notification-modal" id="notificationModal">
+    <div class="notification-header">
+        <h2>Notifications</h2>
+    </div>
+    <div class="notification-list">
+        <div class="notification-item">
+            <img src="https://padinusantara.co.id/media/team/andi.jpg" alt="User Avatar" class="notification-avatar">
+            <div class="notification-content">
+                <p><strong>Pesan baru dari Admin Fakultas</strong> "Kesalahan dalam dokumen A"</p>
+                <span class="notification-time">a few moments ago</span>
+            </div>
+        </div>
+        <div class="notification-item">
+            <img src="https://padinusantara.co.id/media/team/andi.jpg" alt="User Avatar" class="notification-avatar">
+            <div class="notification-content">
+                <p><strong>Jese leos</strong> and <strong>5 others</strong> ujian sidang akan segera di mulai.</p>
+                <span class="notification-time">10 minutes ago</span>
+            </div>
+        </div>
+        <div class="notification-item">
+            <img src="https://padinusantara.co.id/media/team/andi.jpg" alt="User Avatar" class="notification-avatar">
+            <div class="notification-content">
+                <p><strong>Aco</strong> and <strong>141 others</strong> telah menyelesaikan ujian proposal</p>
+                <span class="notification-time">44 minutes ago</span>
+            </div>
+        </div>
+        <div class="notification-footer">
+            <a href="#" class="view-all">View all</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="dashboard-content">
+    <div class="student-list-container">
+        <div class="list-header">
+            <div class="list-title">
+                <h2>Nilai Mahasiswa</h2>
+                <p>Daftar nilai mahasiswa Fakultas Ekonomi dan Bisnis</p>
+            </div>
+            <div class="list-filters">
+                <div class="filter-dropdown">
+                    <button class="filter-btn">
+                        Filter Mata Kuliah <i class="ri-arrow-down-s-line"></i>
+                    </button>
+                </div>
+                <div class="date-filter">
+                    <div class="date-input">
+                        <i class="ri-calendar-line"></i>
+                        <input type="text" placeholder="Semester">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="student-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>NAMA MAHASISWA</th>
+                        <th>NIM</th>
+                        <th>MATA KULIAH</th>
+                        <th>TUGAS</th>
+                        <th>UTS</th>
+                        <th>UAS</th>
+                        <th>NILAI AKHIR</th>
+                        <th>GRADE</th>
+                        <th>AKSI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="student-info">
+                                <img src="/admin.jpg" alt="Student">
+                                <span>Hermanto</span>
+                            </div>
+                        </td>
+                        <td>2023001234</td>
+                        <td>Ekonomi Makro</td>
+                        <td>85</td>
+                        <td>88</td>
+                        <td>90</td>
+                        <td>88</td>
+                        <td><span class="grade-badge a">A</span></td>
+                        <td>
+                            <button class="action-btn"><i class="ri-more-2-fill"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="student-info">
+                                <img src="/admin.jpg" alt="Student">
+                                <span>Sarah Amalia</span>
+                            </div>
+                        </td>
+                        <td>2023001235</td>
+                        <td>Ekonomi Makro</td>
+                        <td>82</td>
+                        <td>85</td>
+                        <td>87</td>
+                        <td>85</td>
+                        <td><span class="grade-badge a">A</span></td>
+                        <td>
+                            <button class="action-btn"><i class="ri-more-2-fill"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="student-info">
+                                <img src="/admin.jpg" alt="Student">
+                                <span>Ahmad Rizky</span>
+                            </div>
+                        </td>
+                        <td>2023001236</td>
+                        <td>Ekonomi Makro</td>
+                        <td>75</td>
+                        <td>78</td>
+                        <td>80</td>
+                        <td>78</td>
+                        <td><span class="grade-badge b">B</span></td>
+                        <td>
+                            <button class="action-btn"><i class="ri-more-2-fill"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="student-info">
+                                <img src="/admin.jpg" alt="Student">
+                                <span>Putri Wulandari</span>
+                            </div>
+                        </td>
+                        <td>2023001237</td>
+                        <td>Ekonomi Makro</td>
+                        <td>88</td>
+                        <td>90</td>
+                        <td>92</td>
+                        <td>90</td>
+                        <td><span class="grade-badge a">A</span></td>
+                        <td>
+                            <button class="action-btn"><i class="ri-more-2-fill"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="student-info">
+                                <img src="/admin.jpg" alt="Student">
+                                <span>Budi Santoso</span>
+                            </div>
+                        </td>
+                        <td>2023001238</td>
+                        <td>Ekonomi Makro</td>
+                        <td>70</td>
+                        <td>65</td>
+                        <td>68</td>
+                        <td>67</td>
+                        <td><span class="grade-badge c">C</span></td>
+                        <td>
+                            <button class="action-btn"><i class="ri-more-2-fill"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="student-info">
+                                <img src="/admin.jpg" alt="Student">
+                                <span>Dewi Safitri</span>
+                            </div>
+                        </td>
+                        <td>2023001239</td>
+                        <td>Ekonomi Makro</td>
+                        <td>78</td>
+                        <td>82</td>
+                        <td>80</td>
+                        <td>80</td>
+                        <td><span class="grade-badge b">B</span></td>
+                        <td>
+                            <button class="action-btn"><i class="ri-more-2-fill"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="student-info">
+                                <img src="/admin.jpg" alt="Student">
+                                <span>Rudi Hartono</span>
+                            </div>
+                        </td>
+                        <td>2023001240</td>
+                        <td>Ekonomi Makro</td>
+                        <td>55</td>
+                        <td>60</td>
+                        <td>58</td>
+                        <td>58</td>
+                        <td><span class="grade-badge d">D</span></td>
+                        <td>
+                            <button class="action-btn"><i class="ri-more-2-fill"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="student-info">
+                                <img src="/admin.jpg" alt="Student">
+                                <span>Nina Melani</span>
+                            </div>
+                        </td>
+                        <td>2023001241</td>
+                        <td>Ekonomi Makro</td>
+                        <td>85</td>
+                        <td>83</td>
+                        <td>87</td>
+                        <td>85</td>
+                        <td><span class="grade-badge a">A</span></td>
+                        <td>
+                            <button class="action-btn"><i class="ri-more-2-fill"></i></button>
+                        </td>
+                    </tr>
+      
+
+          
+
+
+           
+
+            
+
+                  
+
+                
+                    <!-- Add more student rows here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        </div>
+    </div>
+
+    <!-- JS FOR SIDEBAR/OPENG/CLOSE -->
+   <script>
+        const toggleButton = document.getElementById('toggle-sidebar');
+        const dashboardContainer = document.querySelector('.dashboard-container');
+        const mainContent = document.querySelector('.main-content');
+        const sidebar = document.querySelector('.sidebar');
+
+          // Function to check screen width and collapse sidebar
+        const checkScreenWidth = () => {
+            if (window.innerWidth <= 768) {
+                dashboardContainer.classList.add('sidebar-collapsed');
+            } else {
+                dashboardContainer.classList.remove('sidebar-collapsed');
+            }
+        };
+
+        // Check on page load
+        checkScreenWidth();
+
+        // Check on window resize
+        window.addEventListener('resize', checkScreenWidth);
+        
+        // Toggle sidebar with button
+        toggleButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dashboardContainer.classList.toggle('sidebar-collapsed');
+        });
+
+        // Close sidebar when clicking main content
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !toggleButton.contains(e.target)) {
+                dashboardContainer.classList.add('sidebar-collapsed');
+            }
+        });
+
+        // Active Menu Item
+        const menuItems = document.querySelectorAll('.sidebar-menu li');
+        menuItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                menuItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+    </script>
+
+    <!-- JS FOR DROPDOWN -->
+    <script>
+      // Dropdown functionality
+      const dropdownItems = document.querySelectorAll('.has-dropdown > a');
+        
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const parent = item.parentElement;
+                
+                // Toggle current dropdown
+                if (parent.classList.contains('active')) {
+                    parent.classList.remove('active');
+                } else {
+                    // Close other dropdowns
+                    dropdownItems.forEach(other => {
+                        other.parentElement.classList.remove('active');
+                    });
+                    parent.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+    <!-- JS FOR DARK DASHBOARD -->
+    <script>
+        // Dark mode toggle
+        const darkModeToggle = document.querySelector('.ri-contrast-2-fill');
+        
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+        }
+        
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            // Save preference
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                localStorage.setItem('darkMode', null);
+            }
+        });
+    </script>
+
+
+<!-- JS FOR NOTIFIKASI -->
+<script>
+    const notificationButton = document.querySelector('.ri-notification-3-line');
+    const notificationModal = document.getElementById('notificationModal');
+
+    notificationButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        notificationModal.classList.toggle('show-notification');
+    });
+
+    // Close notification modal when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!notificationModal.contains(e.target) && !notificationButton.contains(e.target)) {
+            notificationModal.classList.remove('show-notification');
+        }
+    });
+</script>
+<!-- JS FOR NOTIFIKASI -->
+
+
+</body>
+</html>
