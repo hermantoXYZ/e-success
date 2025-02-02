@@ -46,7 +46,7 @@
                             <li><a href="#">Finalisasi Nilai Awal</a></li>
                             <li><a href="#">Finalisasi Nilai Akhir</a></li>
                             <li><a href="#">Pengantar Cuti</a></li>
-                            <li><a href="#">Layanan tambahan</a></li>
+                            <li><a href="#">Layanan Lainnya</a></li>
                         </ul>
                     </li>
                     <li>
@@ -143,95 +143,25 @@
 
 
 <div class="dashboard-content">
-    <div class="guide-container">
-        <div class="guide-header">
-            <h2>Panduan Penggunaan E-Success</h2>
-            <p>Pelajari cara menggunakan layanan E-Success melalui video tutorial berikut</p>
-        </div>
-
-        <div class="video-categories">
-            <button class="category-btn active">Semua</button>
-            <button class="category-btn">Layanan Akademik</button>
-            <button class="category-btn">Seminar & Ujian</button>
-            <button class="category-btn">Pengajaran</button>
-            <button class="category-btn">Lainnya</button>
-        </div>
-
-        <div class="video-grid">
-            <!-- Video Item 1 -->
-            <div class="video-item">
-                <div class="video-thumbnail">
-                    <img src="https://img.youtube.com/vi/EXAMPLE1/maxresdefault.jpg" alt="Tutorial">
-                    <span class="video-duration">5:30</span>
-                    <button class="play-btn"><i class="ri-play-fill"></i></button>
+   
+    <div class="dashboard-content">
+        <!-- Success Modal -->
+        <div class="success-modal" id="successModal">
+            <div class="success-modal-content">
+                <div class="success-modal-header">
+                    <i class="ri-checkbox-circle-fill success-icon"></i>
+                    <h2>Success!</h2>
                 </div>
-                <div class="video-info">
-                    <h3>Cara Mengajukan Judul Skripsi</h3>
-                    <p>Panduan lengkap proses pengajuan judul skripsi melalui E-Success</p>
-                    <div class="video-meta">
-                        <span><i class="ri-eye-line"></i> 1.2K views</span>
-                        <span><i class="ri-time-line"></i> 2 minggu yang lalu</span>
-                    </div>
+                <div class="success-modal-body">
+                    <p>Your submission has been successfully processed.</p>
                 </div>
-            </div>
-
-            <!-- Video Item 2 -->
-            <div class="video-item">
-                <div class="video-thumbnail">
-                    <img src="https://img.youtube.com/vi/EXAMPLE2/maxresdefault.jpg" alt="Tutorial">
-                    <span class="video-duration">8:45</span>
-                    <button class="play-btn"><i class="ri-play-fill"></i></button>
-                </div>
-                <div class="video-info">
-                    <h3>Tutorial Pendaftaran Seminar Proposal</h3>
-                    <p>Langkah-langkah mendaftar seminar proposal di E-Success</p>
-                    <div class="video-meta">
-                        <span><i class="ri-eye-line"></i> 980 views</span>
-                        <span><i class="ri-time-line"></i> 1 bulan yang lalu</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Video Item 3 -->
-            <div class="video-item">
-                <div class="video-thumbnail">
-                    <img src="https://img.youtube.com/vi/EXAMPLE3/maxresdefault.jpg" alt="Tutorial">
-                    <span class="video-duration">6:15</span>
-                    <button class="play-btn"><i class="ri-play-fill"></i></button>
-                </div>
-                <div class="video-info">
-                    <h3>Panduan Input Nilai Mahasiswa</h3>
-                    <p>Tutorial cara menginput dan memvalidasi nilai mahasiswa</p>
-                    <div class="video-meta">
-                        <span><i class="ri-eye-line"></i> 756 views</span>
-                        <span><i class="ri-time-line"></i> 3 minggu yang lalu</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Video Item 4 -->
-            <div class="video-item">
-                <div class="video-thumbnail">
-                    <img src="https://img.youtube.com/vi/EXAMPLE4/maxresdefault.jpg" alt="Tutorial">
-                    <span class="video-duration">4:20</span>
-                    <button class="play-btn"><i class="ri-play-fill"></i></button>
-                </div>
-                <div class="video-info">
-                    <h3>Cara Menggunakan Fitur Chat dengan Pembimbing</h3>
-                    <p>Tutorial komunikasi dengan dosen pembimbing melalui E-Success</p>
-                    <div class="video-meta">
-                        <span><i class="ri-eye-line"></i> 645 views</span>
-                        <span><i class="ri-time-line"></i> 5 hari yang lalu</span>
-                    </div>
+                <div class="success-modal-footer">
+                    <button class="success-modal-close" id="successModalClose">Close</button>
                 </div>
             </div>
         </div>
-
-        <!-- Load More Button -->
-        <button class="load-more-btn">
-            <i class="ri-refresh-line"></i> Muat Lebih Banyak
-        </button>
     </div>
+
 </div>
 
 </div>
@@ -352,6 +282,38 @@
 </script>
 <!-- JS FOR NOTIFIKASI -->
 
+
+
+<!-- JS FOR SUCCESS MODAL -->
+
+<!-- JS FOR SUCCESS MODAL -->
+<script>
+    const successModal = document.getElementById('successModal');
+    const successModalClose = document.getElementById('successModalClose');
+
+    // Function to show success modal
+    function showSuccessModal() {
+        successModal.classList.add('show-success-modal');
+        setTimeout(() => {
+            hideSuccessModal();
+        }, 3000); // Auto hide after 3 seconds
+    }
+
+    // Function to hide success modal
+    function hideSuccessModal() {
+        successModal.classList.remove('show-success-modal');
+    }
+
+    // Close modal when clicking the close button
+    successModalClose.addEventListener('click', hideSuccessModal);
+
+    // Close modal when clicking outside
+    window.addEventListener('click', (e) => {
+        if (e.target === successModal) {
+            hideSuccessModal();
+        }
+    });
+</script>
 
 </body>
 </html>
