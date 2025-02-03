@@ -31,7 +31,7 @@ E-SUCCESS at Universitas Negeri Makassar (FEB-UNM).
 View demo: [Button Components](https://e-success.vercel.app/button.html)
 
 ### Basic Usage
-
+```html
 <button class="btn small primary">
 <i class="ri-delete-bin-line"></i>Delete
 </button>
