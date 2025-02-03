@@ -32,9 +32,11 @@ View demo: [Button Components](https://e-success.vercel.app/button.html)
 
 ### Basic Usage
 
-```<button class="btn small primary">
+<button class="btn small primary">
 <i class="ri-delete-bin-line"></i>Delete
 </button>
-```
 
+- btn
+- btn small, large, outlined
+- primary, secondary, success, danger, warning, info
 
