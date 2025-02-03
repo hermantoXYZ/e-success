@@ -14,9 +14,7 @@ E-SUCCESS at Universitas Negeri Makassar (FEB-UNM).
 - Database:
   - MySQL
 
-# FEATURES
-Student Services
-- Academic Services Management
+# FEATURES v1
 
 - [Dashboard](https://e-success.vercel.app/dashboard.html) - Main Dashboard
 - [Success Modal](https://e-success.vercel.app/modal.html) - Success Modal
@@ -25,4 +23,4 @@ Student Services
 - [User Guide](https://e-success.vercel.app/panduan.html) - panduan
 - [Profile](https://e-success.vercel.app/profil.html) - profil user
 - [Profile](https://e-success.vercel.app/login.html) - login
-- [Profile](https://e-success.vercel.app/profil.html) - reset password
+- [Profile](https://e-success.vercel.app/forgot.html) - reset password
