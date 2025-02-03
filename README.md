@@ -24,3 +24,17 @@ E-SUCCESS at Universitas Negeri Makassar (FEB-UNM).
 - [Profile](https://e-success.vercel.app/profil.html) - profil user
 - [Profile](https://e-success.vercel.app/login.html) - login
 - [Profile](https://e-success.vercel.app/forgot.html) - reset password
+
+# DOC BUTTON 
+
+## Button Components
+View demo: [Button Components](https://e-success.vercel.app/button.html)
+
+### Basic Usage
+
+```<button class="btn small primary">
+<i class="ri-delete-bin-line"></i>Delete
+</button>
+```
+
+
