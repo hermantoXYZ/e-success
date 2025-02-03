@@ -15,5 +15,13 @@ E-SUCCESS at Universitas Negeri Makassar (FEB-UNM).
   - MySQL
 
 # FEATURES
- Student Services
+Student Services
 - Academic Services Management
+
+# Pages
+- `/dashboard.html` - Main Dashboard
+- `/modal.html` - Success Modal Component
+- `/messages.html` - Messages Interface
+- `/nilai-mahasiswa.html` - Student Grades
+- `/panduan.html` - User Guide
+- `/profil.html` - User Profile
