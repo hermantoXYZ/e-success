@@ -18,10 +18,11 @@ E-SUCCESS at Universitas Negeri Makassar (FEB-UNM).
 Student Services
 - Academic Services Management
 
-# Pages
-- `/dashboard.html` - Main Dashboard
-- `/modal.html` - Success Modal Component
-- `/messages.html` - Messages Interface
-- `/nilai-mahasiswa.html` - Student Grades
-- `/panduan.html` - User Guide
-- `/profil.html` - User Profile
+- [Dashboard](https://e-success.vercel.app/dashboard.html) - Main Dashboard
+- [Success Modal](https://e-success.vercel.app/modal.html) - Success Modal
+- [Messages](https://e-success.vercel.app/messages.html) - Messages Interface
+- [Student Grades](https://e-success.vercel.app/nilai-mahasiswa.html) - Tabel
+- [User Guide](https://e-success.vercel.app/panduan.html) - panduan
+- [Profile](https://e-success.vercel.app/profil.html) - profil user
+- [Profile](https://e-success.vercel.app/login.html) - login
+- [Profile](https://e-success.vercel.app/profil.html) - reset password
