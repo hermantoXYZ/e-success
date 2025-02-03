@@ -36,6 +36,7 @@ View demo: [Button Components](https://e-success.vercel.app/button.html)
 <i class="ri-delete-bin-line"></i>Delete
 </button>
 ```
+for icon, selected mki disini kak https://remixicon.com/
 
 - btn
 - btn small, large, outlined
