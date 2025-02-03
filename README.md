@@ -35,6 +35,7 @@ View demo: [Button Components](https://e-success.vercel.app/button.html)
 <button class="btn small primary">
 <i class="ri-delete-bin-line"></i>Delete
 </button>
+```
 
 - btn
 - btn small, large, outlined
