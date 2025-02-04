@@ -133,14 +133,6 @@ body {
         display: flex;
         align-items: center;
     }
-
-    .program-icon img { 
-        display: none;
-    }
-
-    .program-card {
-        padding: 1rem;
-    }
     
 }
 
