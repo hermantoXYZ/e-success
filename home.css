@@ -1028,7 +1028,7 @@ body {
     background: #f8f9fa;
 }
 
-.widuda-grid {
+.wisuda-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
@@ -1039,7 +1039,7 @@ body {
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -1074,4 +1074,63 @@ body {
 
 .wisuda-info {
     padding: 1.5rem;
+}
+
+.wisuda-info h3 {
+    font-size: 1.25rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.wisuda-info .nim {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.wisuda-info .prodi {
+    color: #1a73e8;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.wisuda-info .ipk {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.wisuda-details {
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.detail-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.detail-row i {
+    color: #1a73e8;
+    font-size: 1.1rem;
+    margin-top: 0.2rem;
+}
+
+.wisuda-footer {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .wisuda-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wisuda-image {
+        height: 200px;
+    }
 }
