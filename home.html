@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil | E-Success FEB-UNM</title>
+    <link rel="stylesheet" href="/home.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="/">E-Success</a>
+        </div>
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button type="submit"><i class="ri-search-line"></i></button>
+            </div>
+        </div>
+        <div class="mobile-icons">
+            <button class="mobile-search-toggle">
+                <i class="ri-search-line"></i>
+            </button>
+            <div class="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const searchToggle = document.querySelector('.mobile-search-toggle');
+        const searchContainer = document.querySelector('.search-container');
+        const searchOverlay = document.querySelector('.search-overlay');
+    
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navToggle.querySelector('i').classList.toggle('ri-menu-line');
+            navToggle.querySelector('i').classList.toggle('ri-close-line');
+        });
+    
+        searchToggle.addEventListener('click', () => {
+            searchContainer.classList.toggle('active');
+            searchOverlay.classList.toggle('active');
+            searchToggle.querySelector('i').classList.toggle('ri-search-line');
+            searchToggle.querySelector('i').classList.toggle('ri-close-line');
+        });
+    
+        searchOverlay.addEventListener('click', () => {
+            searchContainer.classList.remove('active');
+            searchOverlay.classList.remove('active');
+            searchToggle.querySelector('i').classList.remove('ri-close-line');
+            searchToggle.querySelector('i').classList.add('ri-search-line');
+        });
+    </script>
+</body>
+
+</body>
+</html>
