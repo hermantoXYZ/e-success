@@ -723,6 +723,11 @@ body {
     color: #2e7d32;
 }
 
+.status.close {
+    background: #b80000;
+    color: #fff;
+}
+
 .program-schedule {
     display: flex;
     flex-direction: column;
