@@ -30,7 +30,7 @@ body {
 .nav-logo a {
     font-size: 1.6rem;
     font-weight: 700;
-    color: #1a73e8;
+    color: #136815;
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -63,7 +63,7 @@ body {
 }
 
 .search-box input:focus {
-    border-color: #1a73e8;
+    border-color: #136815;
     background: #fff;
     box-shadow: 0 0 0 4px rgba(26, 115, 232, 0.1);
 }
@@ -81,7 +81,7 @@ body {
 }
 
 .search-box button:hover {
-    color: #1a73e8;
+    color: #136815;
 }
 
 /* Navigation Links */
@@ -102,12 +102,12 @@ body {
 }
 
 .nav-links a:hover {
-    color: #1a73e8;
+    color: #136815;
     background: rgba(26, 115, 232, 0.1);
 }
 
 .nav-links a.active {
-    color: #1a73e8;
+    color: #136815;
     background: rgba(26, 115, 232, 0.1);
 }
 
@@ -191,7 +191,7 @@ body {
 
     .mobile-search-toggle:hover, .nav-toggle:hover {
         background: rgba(26, 115, 232, 0.1);
-        color: #1a73e8;
+        color: #136815;
     }
 
     .nav-links {
@@ -247,7 +247,7 @@ body {
     .search-container {
         position: fixed;
         top: 50%;
-        left: 50%;
+        left: 51%;
         transform: translate(-50%, -50%) scale(0.9);
         width: 90%;
         max-width: 600px;
@@ -357,7 +357,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 1rem;
-    color: #1a73e8;
+    color: #136815;
     background: rgba(255, 255, 255, 0.9);
     width: 250px;
     padding: 0.5rem 1rem;
@@ -385,7 +385,7 @@ body {
     align-items: center;
     gap: 0.5rem;
     padding: 1rem 2rem;
-    background: #1a73e8;
+    background: #136815;
     color: #fff;
     text-decoration: none;
     width: 200px;
@@ -567,7 +567,7 @@ body {
 }
 
 .program-search:focus {
-    border-color: #1a73e8;
+    border-color: #136815;
     box-shadow: 0 0 0 4px rgba(26, 115, 232, 0.1);
 }
 
@@ -600,7 +600,7 @@ body {
 
 .program-categories li.active,
 .program-categories li:hover {
-    background: #1a73e8;
+    background: #136815;
     color: #fff;
 }
 
@@ -628,7 +628,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #1a73e8;
+    color: #136815;
     font-size: 1.5rem;
 }
 
@@ -670,7 +670,7 @@ body {
 
 .tag.online {
     background: #e8f0fe;
-    color: #1a73e8;
+    color: #136815;
 }
 
 .tag.privat {
@@ -751,7 +751,7 @@ body {
 }
 
 .detail-item i {
-    color: #1a73e8;
+    color: #136815;
     font-size: 1rem;
 }
 
@@ -794,7 +794,7 @@ body {
 }
 
 .page-numbers span.active {
-    background: #1a73e8;
+    background: #136815;
     color: #fff;
 }
 
@@ -822,7 +822,7 @@ body {
 .prev-page:hover,
 .next-page:hover {
     background: #e8f0fe;
-    color: #1a73e8;
+    color: #136815;
 }
 
 /* Responsive Styles */
@@ -899,7 +899,7 @@ body {
 }
 
 .about-text .subtitle {
-    color: #1a73e8;
+    color: #136815;
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
@@ -932,7 +932,7 @@ body {
 
 .feature-item i {
     font-size: 2rem;
-    color: #1a73e8;
+    color: #136815;
     margin-bottom: 1rem;
 }
 
@@ -972,7 +972,7 @@ body {
 }
 
 .btn-primary {
-    background: #1a73e8;
+    background: #136815;
     color: #fff;
 }
 
@@ -983,7 +983,7 @@ body {
 
 .btn-secondary {
     background: #e8f0fe;
-    color: #1a73e8;
+    color: #136815;
 }
 
 .btn-secondary:hover {
@@ -1089,7 +1089,7 @@ body {
 }
 
 .wisuda-info .prodi {
-    color: #1a73e8;
+    color: #136815;
     font-weight: 500;
     margin-bottom: 0.25rem;
 }
@@ -1115,7 +1115,7 @@ body {
 }
 
 .detail-row i {
-    color: #1a73e8;
+    color: #136815;
     font-size: 1.1rem;
     margin-top: 0.2rem;
 }
@@ -1134,3 +1134,161 @@ body {
         height: 200px;
     }
 }
+
+
+/* FOOTER */
+.footer {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 4rem 0 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+.footer-logo h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #136815, #34a853);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-logo p {
+    color: #999;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #136815;
+    transform: translateY(-3px);
+}
+
+.footer-col h4 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    width: 50px;
+    height: 2px;
+    background: #136815;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 1rem;
+}
+
+.footer-col ul li a {
+    color: #999;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #136815;
+    padding-left: 5px;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #999;
+    margin-bottom: 1rem;
+}
+
+.contact-info i {
+    color: #136815;
+}
+
+.footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    color: #999;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: #999;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #136815;
+}
+
+@media screen and (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+/* FOOTER */
